@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 import { FaCircleArrowDown, FaCircleArrowUp } from 'react-icons/fa6';
