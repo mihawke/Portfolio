@@ -43,7 +43,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ company, description, position, yea
 const EducationSection = () => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
-      <h2 className='text-2xl font-bold lg:text-6xl text-white text-center tracking-wider font-source_code_pro_bold'>
+      <h2 className='text-2xl font-bold lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold'>
         Education
       </h2>
       <div className='flex flex-wrap items-center justify-center gap-6 p-6'>
@@ -76,7 +76,7 @@ const EducationSection = () => {
 const WorkSection = () => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
-      <h2 className='text-2xl font-bold lg:text-6xl text-white text-center tracking-wider font-source_code_pro_bold'>
+      <h2 className='text-2xl font-bold lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold'>
         Work Experience
       </h2>
       <div className='flex flex-col lg:flex-row items-start gap-4 p-8'>
