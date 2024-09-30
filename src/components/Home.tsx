@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { KeyboardEvent, useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 import { FaCircleArrowDown, FaCircleArrowUp } from 'react-icons/fa6';
@@ -164,11 +164,25 @@ const Home = () => {
     handleNextSection('down');
   };
 
+  const handleKeyPress = (e: globalThis.KeyboardEvent): void => {
+    if (e.key === 'ArrowDown') {
+      handleNextSection('down');
+    }
+    else if (e.key === 'ArrowUp') {
+      handleNextSection('up');
+    }
+  }
+
   // Add an event listener to detect wheel scroll
   useEffect(() => {
+    // Attach both event listeners
     window.addEventListener('wheel', handleWheelScroll);
+    window.addEventListener('keydown', handleKeyPress)
+
+    // Cleanup function to remove both event listeners
     return () => {
       window.removeEventListener('wheel', handleWheelScroll);
+      window.removeEventListener('keydown', handleKeyPress)
     };
   }, [currentSection]);
 
@@ -197,7 +211,6 @@ const Home = () => {
           <SkillSection handleNextSection={goUp} />
         </motion.div>
       }
-
       {/* Section Indicator */}
       <div className="absolute top-1/2 right-10 transform -translate-y-1/2 flex flex-col space-y-2">
         <span
