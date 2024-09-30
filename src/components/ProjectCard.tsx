@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { FaEye, FaGithub, FaPlayCircle } from 'react-icons/fa';
+import {FaGithub, FaPlayCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {

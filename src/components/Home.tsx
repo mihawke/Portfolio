@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 import { FaCircleArrowDown, FaCircleArrowUp } from 'react-icons/fa6';
@@ -182,9 +182,11 @@ const Home = () => {
       {/* Section Indicator */}
       <div className="absolute top-1/2 right-2 lg:right-10 transform -translate-y-1/2 flex flex-col space-y-2">
         <span
+          onClick={goUp}
           className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full ${currentSection === 0 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-300 ease-in-out`}
         ></span>
         <span
+          onClick={goDown}
           className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full ${currentSection === 1 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-00 ease-in-out`}
         ></span>
       </div>
