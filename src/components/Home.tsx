@@ -16,23 +16,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: 200 }} // Exit back up
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="absolute bottom-10 text-4xl text-white"
+        className="absolute bottom-5 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowDown style={{ color: '#6b7280' }} />
       </motion.button>
 
-      <h1 className='text-6xl text-white tracking-wider'>
+      <h1 className='text-2xl font-bold lg:text-6xl text-white text-center tracking-wider font-source_code_pro_bold'>
         I'M PRATIK GAWARI
       </h1>
 
-      <p className='text-gray-400 mt-4 text-center max-w-xl leading-relaxed'>
+      <p className='text-gray-400 text-sm lg:text-base mt-4 text-center w-[75%] lg:max-w-xl leading-relaxed font-source_code_pro'>
         Full-stack developer with a passion for building intuitive and scalable web applications.
         Experienced in modern web technologies to create impactful solutions.
       </p>
 
       <Link
         to={'/projects'}
-        className='mt-8 px-4 py-2 bg-[#E94560] text-white text-sm font-semibold rounded-md shadow-md hover:bg-[#D73752] transition duration-200'
+        className='mt-8 px-4 py-2 bg-[#E94560] text-white text-sm font-semibold rounded-md shadow-md hover:bg-[#D73752] transition duration-200 font-source_code_pro_bold'
       >View Projects</Link>
 
     </section>
@@ -42,6 +42,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ handleNextSection }) => {
 type SkillSectionProps = {
   handleNextSection: () => void;
 };
+
+interface SkillProps {
+  title: string;
+}
+
+const Skill: React.FC<SkillProps> = ({ title }) => {
+  return (
+    <div className='bg-[#282838] lg:px-4 lg:py-1 rounded-sm lg:rounded-md text-center text-gray-300 place-content-center'>
+      <span className='text-sm px-4 py-1 lg:text-base font-semibold font-source_code_pro_semibold'>{title}</span>
+    </div>
+  )
+}
 
 const SkillSection: React.FC<SkillSectionProps> = ({ handleNextSection }) => {
   return (
@@ -54,81 +66,37 @@ const SkillSection: React.FC<SkillSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: -200 }} // Exit down
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="absolute top-10 text-4xl text-white"
+        className="absolute top-5 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowUp style={{ color: '#6b7280' }} />
       </motion.button>
-      <h2 className='text-2xl text-white font-semibold text-center'>
+      <h2 className='text-xl lg:text-2xl text-white font-semibold text-center'>
         Skills & Technologies
       </h2>
 
-      <div className='flex flex-wrap justify-center gap-6 mt-6 max-w-[70%]'>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>HTML</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>CSS</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Tailwind CSS</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Figma</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>JavaScript</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Typescript</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>EJS</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>React</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>React Native</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Node.js</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Express.js</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Passport.js</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Webpack</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Git</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>JSON</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>RESTful APIs</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>MongoDB</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>SQL</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Framer Motion</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Recharts</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>Python</span>
-        </div>
-        <div className='bg-[#282838] px-4 py-1 rounded-md text-center text-gray-300 place-content-center'>
-          <span className='text-base font-semibold'>C#</span>
-        </div>
+      <div className='flex flex-wrap justify-center gap-6 mt-6 w-[85%] lg:max-w-[70%]'>
+        <Skill title='HTML' />
+        <Skill title='CSS' />
+        <Skill title='Tailwind CSS' />
+        <Skill title='Figma' />
+        <Skill title='JavaScript' />
+        <Skill title='Typescript' />
+        <Skill title='EJS' />
+        <Skill title='React' />
+        <Skill title='React Native' />
+        <Skill title='Node.js' />
+        <Skill title='Express.js' />
+        <Skill title='Passport.js' />
+        <Skill title='Webpack' />
+        <Skill title='Git' />
+        <Skill title='JSON' />
+        <Skill title='RESTful APIs' />
+        <Skill title='MongoDB' />
+        <Skill title='SQL' />
+        <Skill title='Framer Motion' />
+        <Skill title='Recharts' />
+        <Skill title='Python' />
+        <Skill title='C#' />
       </div>
     </section>
   )
@@ -187,7 +155,7 @@ const Home = () => {
   }, [currentSection]);
 
   return (
-    <main className="bg-[#1C1C24] flex flex-col items-center p-6 h-[90vh] overflow-hidden relative">
+    <main className="bg-[#1C1C24] flex flex-col h-full items-center p-6 overflow-hidden relative">
       {currentSection === 0 ?
         <motion.div
           key={currentSection}
@@ -212,12 +180,12 @@ const Home = () => {
         </motion.div>
       }
       {/* Section Indicator */}
-      <div className="absolute top-1/2 right-10 transform -translate-y-1/2 flex flex-col space-y-2">
+      <div className="absolute top-1/2 right-2 lg:right-10 transform -translate-y-1/2 flex flex-col space-y-2">
         <span
-          className={`h-3 w-3 rounded-full ${currentSection === 0 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-300 ease-in-out`}
+          className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full ${currentSection === 0 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-300 ease-in-out`}
         ></span>
         <span
-          className={`h-3 w-3 rounded-full ${currentSection === 1 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-00 ease-in-out`}
+          className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full ${currentSection === 1 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-00 ease-in-out`}
         ></span>
       </div>
     </main>

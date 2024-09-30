@@ -14,9 +14,9 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, demo, github, technologies }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.1 }} // Adjust the duration for hover
+      whileHover={{ scale: 1.05  , transition:{duration:0.2}}} // Adjust the duration for hover
       initial={{ opacity: 0, scale: 0.5 }} // Initial transition
-      animate={{ opacity: 1, scale: 1 }} // Animate transition
+      animate={{ opacity: 1, scale: 1 , transition:{duration:0.5}}} // Animate transition
     >
       <div className='bg-[#282838] rounded-lg shadow-lg overflow-hidden w-full max-w-xs'>
         <div className='p-4'>

@@ -14,11 +14,17 @@
    url("./fonts/Source_Code_Pro/static/SourceCodePro-Medium.ttf");
  }
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+ @font-face {
+  font-family: "Source_Code_Pro_Bold";
+  src: local("Source_Code_Pro_Bold"),
+   url("./fonts/Source_Code_Pro/static/SourceCodePro-Bold.ttf");
+ }
+
+ @font-face {
+  font-family: "Source_Code_Pro_Semibold";
+  src: local("Source_Code_Pro_Semibold"),
+   url("./fonts/Source_Code_Pro/static/SourceCodePro-SemiBold.ttf");
+ }
 
 :root {
   line-height: 1.5;
