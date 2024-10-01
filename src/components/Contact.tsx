@@ -82,7 +82,7 @@ const Contact = () => {
             </form>
           </div>
           <div className="h-[1px] w-full bg-gray-400 rounded-lg my-8 md:my-10"></div>
-          <div className="flex flex-col flex-[1_1_50%] items-start justify-center gap-4 px-10">
+          <div className="flex flex-col items-start justify-center gap-4">
             <div className={paraClassname}>
               <FaEnvelope className="w-4 h-4 text-gray-400" />
               <p className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">pratikgawari0000@gmail.com</p>
