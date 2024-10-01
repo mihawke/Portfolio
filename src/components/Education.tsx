@@ -46,7 +46,7 @@ interface EducationectionProps {
 
 const EducationSection: React.FC<EducationectionProps> = ({ handleNextSection }) => {
   return (
-    <section className='flex flex-col justify-center items-center min-h-[100%]'>
+    <section className='flex flex-col justify-center items-center min-h-[100%] py-10'>
       <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Education
       </h2>
@@ -81,7 +81,7 @@ const EducationSection: React.FC<EducationectionProps> = ({ handleNextSection })
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: 200 }} // Exit back up
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="lg:hidden mt-0 text-xl lg:text-4xl text-white"
+        className="lg:hidden mt-8 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowDown style={{ color: '#6b7280' }} />
       </motion.button>
@@ -95,7 +95,7 @@ interface WorkSectionProps {
 
 const WorkSection: React.FC<WorkSectionProps> = ({ handleNextSection }) => {
   return (
-    <section className='flex flex-col justify-center items-center min-h-[100%]'>
+    <section className='flex flex-col justify-center items-center min-h-[100%] py-10'>
       <motion.button
         onClick={handleNextSection}
         initial={{ opacity: 0, y: -200 }} // Start button below
