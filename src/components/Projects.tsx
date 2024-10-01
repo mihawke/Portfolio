@@ -2,7 +2,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   return (
-    <div className='bg-[#1C1C24] flex flex-wrap flex-1 items-start justify-center gap-6 p-6'>
+    <div className='bg-[#1C1C24] flex flex-wrap flex-[1_1_90%] overflow-auto items-start justify-center gap-4 p-4 md:gap-6 md:p-6'>
       <ProjectCard
         title='Tic Tac Toe Game'
         description='This project is a simple browser-based implementation of the classic Tic Tac Toe game. The project showcases fundamental concepts in web development, including event handling, DOM manipulation, and responsive design.'

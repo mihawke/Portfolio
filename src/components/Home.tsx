@@ -16,23 +16,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: 200 }} // Exit back up
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="absolute bottom-5 text-xl lg:text-4xl text-white"
+        className="hidden lg:block absolute bottom-5 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowDown style={{ color: '#6b7280' }} />
       </motion.button>
 
-      <h1 className='text-2xl font-bold lg:text-6xl text-white text-center tracking-wider font-source_code_pro_bold'>
+      <h1 className="text-xl md:text-3xl lg:text-6xl font-bold text-white text-center tracking-wider font-source_code_pro_bold">
         I'M PRATIK GAWARI
       </h1>
 
-      <p className='text-gray-400 text-sm lg:text-base mt-4 text-center w-[75%] lg:max-w-xl leading-relaxed font-source_code_pro'>
+      <p className="text-gray-400 text-sm md:text-base lg:text-lg mt-4 text-center w-[85%] md:w-[80%] lg:max-w-xl leading-relaxed font-source_code_pro">
         Full-stack developer with a passion for building intuitive and scalable web applications.
         Experienced in modern web technologies to create impactful solutions.
       </p>
 
       <Link
         to={'/projects'}
-        className='mt-8 px-4 py-2 bg-[#E94560] text-white text-sm font-semibold rounded-md shadow-md hover:bg-[#D73752] transition duration-200 font-source_code_pro_bold'
+        className="mt-8 px-4 py-2 bg-[#E94560] text-white text-sm md:text-md font-semibold rounded-md shadow-md hover:bg-[#D73752] transition duration-200 font-source_code_pro_bold"
       >View Projects</Link>
 
     </section>
@@ -57,7 +57,7 @@ const Skill: React.FC<SkillProps> = ({ title }) => {
 
 const SkillSection: React.FC<SkillSectionProps> = ({ handleNextSection }) => {
   return (
-    <section className='w-full px-4 flex flex-col justify-center items-center min-h-[100%]'>
+    <section className='w-full px-4 flex flex-col justify-center items-center h-full lg:min-h-[100%]'>
 
       <motion.button
         onClick={handleNextSection}
@@ -66,7 +66,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: -200 }} // Exit down
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="absolute top-5 text-xl lg:text-4xl text-white"
+        className="hidden lg:block absolute top-5 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowUp style={{ color: '#6b7280' }} />
       </motion.button>
@@ -74,7 +74,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ handleNextSection }) => {
         Skills & Technologies
       </h2>
 
-      <div className='flex flex-wrap justify-center gap-6 mt-6 w-[85%] lg:max-w-[70%]'>
+      <div className='flex flex-wrap justify-center gap-2 lg:gap-6 mt-6 w-[85%] lg:max-w-[70%]'>
         <Skill title='HTML' />
         <Skill title='CSS' />
         <Skill title='Tailwind CSS' />
@@ -155,7 +155,7 @@ const Home = () => {
   }, [currentSection]);
 
   return (
-    <main className="bg-[#1C1C24] flex flex-col h-full items-center p-6 overflow-hidden relative">
+    <main className="bg-[#1C1C24] flex flex-col flex-[1_1_90%] items-center p-6 overflow-hidden relative">
       {currentSection === 0 ?
         <motion.div
           key={currentSection}

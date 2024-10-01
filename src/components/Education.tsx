@@ -11,9 +11,9 @@ interface EduCardProps {
 
 const EduCard: React.FC<EduCardProps> = ({ degree, department, institute, year, score }) => {
   return (
-    <div className='bg-[#282838] p-2 lg:p-6 rounded-lg  flex flex-col gap-1 shadow-lg overflow-hidden w-full max-w-xs border-l-2 lg:border-l-4 border-[#E94560]'>
-      <h1 className='text-base lg:text-2xl font-[600] text-white mb-2'>{degree}</h1>
-      <p className='text-sm lg:text-base text-gray-400'>{department}</p>
+    <div className="bg-[#282838] p-4 lg:p-6 rounded-lg flex flex-col gap-1 shadow-lg overflow-hidden w-full max-w-xs border-l-2 lg:border-l-4 border-[#E94560]">
+      <h1 className="text-base md:text-lg lg:text-2xl font-[600] text-white mb-2">{degree}</h1>
+      <p className="text-sm lg:text-base text-gray-400">{department}</p>
       <p className='text-sm lg:text-base text-gray-400'>{institute}</p>
       <p className='text-sm lg:text-base text-gray-400'>{year}</p>
       <p className='text-sm lg:text-base text-gray-400'>{score}</p>
@@ -30,8 +30,8 @@ interface WorkCardProps {
 
 const WorkCard: React.FC<WorkCardProps> = ({ company, description, position, year }) => {
   return (
-    <div className='bg-[#282838] p-2 lg:p-6 rounded-lg  flex flex-col gap-2 shadow-lg overflow-hidden w-full max-w-xs border-l-2 lg:border-l-4 border-[#E94560]'>
-      <h1 className='text-base lg:text-2xl font-[600] text-white mb-2'>{company}</h1>
+    <div className="bg-[#282838] p-4 lg:p-6 rounded-lg flex flex-col gap-1 shadow-lg overflow-hidden w-full max-w-xs border-l-2 lg:border-l-4 border-[#E94560]">
+      <h1 className="text-base md:text-xl lg:text-2xl font-[600] text-white mb-2">{company}</h1>
       <p className='text-sm lg:text-base text-gray-400'>{position}</p>
       <p className='text-sm lg:text-base text-gray-400'>{year}</p>
       <p className='text-sm lg:text-base text-gray-400'>{description}</p>
@@ -42,10 +42,10 @@ const WorkCard: React.FC<WorkCardProps> = ({ company, description, position, yea
 const EducationSection = () => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
-      <h2 className='text-2xl font-bold lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold'>
+      <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Education
       </h2>
-      <div className='flex flex-wrap items-center justify-center gap-6 p-6'>
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 p-4 md:p-6">
         <EduCard
           degree='Dual Degree (M.Tech & B.Tech)'
           department='Biomedical Engineering Design'
@@ -75,10 +75,10 @@ const EducationSection = () => {
 const WorkSection = () => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
-      <h2 className='text-2xl font-bold lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold'>
+      <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Work Experience
       </h2>
-      <div className='flex flex-col lg:flex-row items-start gap-4 p-8'>
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 p-4 md:p-6">
         <WorkCard
           company='InuAid'
           position='Technical Analyst'
@@ -151,7 +151,7 @@ const Education = () => {
     };
   }, [currentSection]);
   return (
-    <main className="bg-[#1C1C24] flex flex-col items-center p-6 h-full overflow-hidden relative">
+    <main className="bg-[#1C1C24] flex flex-[1_1_90%]  items-center p-4 md:p-6 h-full overflow-hidden relative">
       {currentSection === 0 ?
         <motion.div
           key={currentSection}
@@ -177,12 +177,12 @@ const Education = () => {
       }
       <div className="absolute top-1/2 right-2 lg:right-10 transform -translate-y-1/2 flex flex-col space-y-2">
         <span
-        onClick={goUp}
-          className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full ${currentSection === 0 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-300 ease-in-out`}
+          onClick={goUp}
+          className={`h-2 w-2 md:h-3 md:w-3 rounded-full ${currentSection === 0 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-300 ease-in-out`}
         ></span>
         <span
-        onClick={goDown}
-          className={`h-2 w-2 lg:h-3 lg:w-3 rounded-full ${currentSection === 1 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-00 ease-in-out`}
+          onClick={goDown}
+          className={`h-2 w-2 md:h-3 md:w-3 rounded-full ${currentSection === 1 ? 'bg-[#E94560]' : 'bg-gray-600'} transition-colors duration-00 ease-in-out`}
         ></span>
       </div>
     </main>
