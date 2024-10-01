@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { FaCircleArrowDown, FaCircleArrowUp } from 'react-icons/fa6';
 
 interface EduCardProps {
   degree: string;
@@ -39,9 +40,24 @@ const WorkCard: React.FC<WorkCardProps> = ({ company, description, position, yea
   )
 }
 
-const EducationSection = () => {
+interface EducationectionProps {
+  handleNextSection: () => void;
+}
+
+const EducationSection: React.FC<EducationectionProps> = ({ handleNextSection }) => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
+      <motion.button
+        onClick={handleNextSection}
+        initial={{ opacity: 0, y: 200 }} // Start above the screen
+        animate={{ opacity: 0.5, y: 0 }} // Button moves down into view
+        whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
+        exit={{ opacity: 0, y: 200 }} // Exit back up
+        transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
+        className="lg:hidden absolute bottom-5 text-xl lg:text-4xl text-white"
+      >
+        <FaCircleArrowDown style={{ color: '#6b7280' }} />
+      </motion.button>
       <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Education
       </h2>
@@ -72,9 +88,24 @@ const EducationSection = () => {
   )
 }
 
-const WorkSection = () => {
+interface WorkSectionProps {
+  handleNextSection: () => void;
+}
+
+const WorkSection: React.FC<WorkSectionProps> = ({ handleNextSection }) => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
+      <motion.button
+        onClick={handleNextSection}
+        initial={{ opacity: 0, y: -200 }} // Start button below
+        animate={{ opacity: 0.5, y: 0 }} // Button appears and moves up
+        whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
+        exit={{ opacity: 0, y: -200 }} // Exit down
+        transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
+        className="lg:hidden absolute top-5 text-xl lg:text-4xl text-white"
+      >
+        <FaCircleArrowUp style={{ color: '#6b7280' }} />
+      </motion.button>
       <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Work Experience
       </h2>
@@ -161,7 +192,7 @@ const Education = () => {
           transition={{ duration: 0.5 }}     // Animation duration
           className="w-full h-full"
         >
-          <EducationSection />
+          <EducationSection handleNextSection={goDown} />
         </motion.div>
         :
         <motion.div
@@ -172,7 +203,7 @@ const Education = () => {
           transition={{ duration: 0.5 }}     // Animation duration
           className="w-full h-full"
         >
-          <WorkSection />
+          <WorkSection handleNextSection={goUp} />
         </motion.div>
       }
       <div className="absolute top-1/2 right-2 lg:right-10 transform -translate-y-1/2 flex flex-col space-y-2">

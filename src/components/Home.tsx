@@ -16,7 +16,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: 200 }} // Exit back up
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="hidden lg:block absolute bottom-5 text-xl lg:text-4xl text-white"
+        className="lg:hidden absolute bottom-5 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowDown style={{ color: '#6b7280' }} />
       </motion.button>
@@ -66,7 +66,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: -200 }} // Exit down
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="hidden lg:block absolute top-5 text-xl lg:text-4xl text-white"
+        className="lg:hidden absolute top-5 text-xl lg:text-4xl text-white"
       >
         <FaCircleArrowUp style={{ color: '#6b7280' }} />
       </motion.button>
