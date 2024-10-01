@@ -151,7 +151,7 @@ const Education = () => {
     };
   }, [currentSection]);
   return (
-    <main className="bg-[#1C1C24] flex flex-[1_1_90%]  items-center p-4 md:p-6 h-full overflow-hidden relative">
+    <main className="bg-[#1C1C24] flex flex-[1_1_90%]  items-center p-4 md:p-6 h-full overflow-auto relative">
       {currentSection === 0 ?
         <motion.div
           key={currentSection}
