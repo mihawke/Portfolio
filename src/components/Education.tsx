@@ -47,17 +47,6 @@ interface EducationectionProps {
 const EducationSection: React.FC<EducationectionProps> = ({ handleNextSection }) => {
   return (
     <section className='flex flex-col justify-center items-center min-h-[100%]'>
-      <motion.button
-        onClick={handleNextSection}
-        initial={{ opacity: 0, y: 200 }} // Start above the screen
-        animate={{ opacity: 0.5, y: 0 }} // Button moves down into view
-        whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
-        exit={{ opacity: 0, y: 200 }} // Exit back up
-        transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="lg:hidden absolute bottom-5 text-xl lg:text-4xl text-white"
-      >
-        <FaCircleArrowDown style={{ color: '#6b7280' }} />
-      </motion.button>
       <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Education
       </h2>
@@ -84,6 +73,18 @@ const EducationSection: React.FC<EducationectionProps> = ({ handleNextSection })
           score='Percentage: 91.2%'
         />
       </div>
+
+      <motion.button
+        onClick={handleNextSection}
+        initial={{ opacity: 0, y: 200 }} // Start above the screen
+        animate={{ opacity: 0.5, y: 0 }} // Button moves down into view
+        whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
+        exit={{ opacity: 0, y: 200 }} // Exit back up
+        transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
+        className="lg:hidden mt-0 text-xl lg:text-4xl text-white"
+      >
+        <FaCircleArrowDown style={{ color: '#6b7280' }} />
+      </motion.button>
     </section>
   )
 }
@@ -102,7 +103,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ handleNextSection }) => {
         whileHover={{ opacity: 1, y: 0 }} // Full opacity on hover
         exit={{ opacity: 0, y: -200 }} // Exit down
         transition={{ duration: 0.5, ease: 'easeOut' }} // Smooth transition
-        className="lg:hidden absolute top-5 text-xl lg:text-4xl text-white"
+        className="lg:hidden text-xl mb-16 lg:text-4xl text-white"
       >
         <FaCircleArrowUp style={{ color: '#6b7280' }} />
       </motion.button>
