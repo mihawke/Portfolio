@@ -46,7 +46,7 @@ interface EducationectionProps {
 
 const EducationSection: React.FC<EducationectionProps> = ({ handleNextSection }) => {
   return (
-    <section className='flex flex-col justify-center items-center min-h-[100%] py-10'>
+    <section className='flex flex-col justify-center items-center min-h-[100%] pb-10'>
       <h2 className="text-2xl lg:text-4xl text-white text-center tracking-wider font-source_code_pro_bold">
         Education
       </h2>
@@ -95,7 +95,7 @@ interface WorkSectionProps {
 
 const WorkSection: React.FC<WorkSectionProps> = ({ handleNextSection }) => {
   return (
-    <section className='flex flex-col justify-center items-center min-h-[100%] py-10'>
+    <section className='flex flex-col justify-center items-center min-h-[100%] pt-4'>
       <motion.button
         onClick={handleNextSection}
         initial={{ opacity: 0, y: -200 }} // Start button below
