@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <main className="bg-[#1C1C24] flex flex-col flex-1 items-center">
-      <h2 className="text-2xl lg:text-4xl md:mt-5 text-white text-center tracking-wider font-source_code_pro_bold">
+      <h2 className="text-2xl lg:text-4xl mt-4 md:mt-5 text-white text-center tracking-wider font-source_code_pro_bold">
         CONTACT ME
       </h2>
       <div className="hidden lg:flex flex-row items-center flex-1">
@@ -53,7 +53,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="lg:hidden flex flex-col flex-1">
+      <div className="mt-10 md:mt-4 lg:hidden flex flex-col flex-1">
         <div className="flex flex-col items-start justify-center gap-4">
           <div className="flex flex-row w-full items-center justify-center px-8 md:px-10">
             <form
@@ -81,22 +81,24 @@ const Contact = () => {
               <p className="bg-[#b22200] opacity-60 text-xs md:text-sm px-4 md:px-8 md:py-2 rounded-md md:rounded-lg">Form logic not implemented yet!</p>
             </form>
           </div>
-          <div className="h-[1px] w-full bg-gray-400 rounded-lg my-4 md:my-10"></div>
-          <div className={paraClassname}>
-            <FaEnvelope className="w-4 h-4 text-gray-400" />
-            <p className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">pratikgawari0000@gmail.com</p>
-          </div>
-          <div className={paraClassname}>
-            <FaPhoneAlt className="w-4 h-4 text-gray-400" />
-            <p className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">+91-9370071950 | +91-9422557145</p>
-          </div>
-          <div className={paraClassname}>
-            <FaLinkedin className="w-4 h-4 text-gray-400" />
-            <a href="https://www.linkedin.com/in/pratikg22/" className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">https://www.linkedin.com/in/pratikg22/</a>
-          </div>
-          <div className={paraClassname}>
-            <FaGithub className="w-4 h-4 text-gray-400" />
-            <a href="https://github.com/mihawke" className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">https://github.com/mihawke</a>
+          <div className="h-[1px] w-full bg-gray-400 rounded-lg my-8 md:my-10"></div>
+          <div className="flex flex-col flex-[1_1_50%] items-start justify-center gap-4 px-10">
+            <div className={paraClassname}>
+              <FaEnvelope className="w-4 h-4 text-gray-400" />
+              <p className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">pratikgawari0000@gmail.com</p>
+            </div>
+            <div className={paraClassname}>
+              <FaPhoneAlt className="w-4 h-4 text-gray-400" />
+              <p className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">+91-9370071950 | +91-9422557145</p>
+            </div>
+            <div className={paraClassname}>
+              <FaLinkedin className="w-4 h-4 text-gray-400" />
+              <a href="https://www.linkedin.com/in/pratikg22/" className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">https://www.linkedin.com/in/pratikg22/</a>
+            </div>
+            <div className={paraClassname}>
+              <FaGithub className="w-4 h-4 text-gray-400" />
+              <a href="https://github.com/mihawke" className="text-xs md:text-sm text-gray-400 font-source_code_pro_semibold">https://github.com/mihawke</a>
+            </div>
           </div>
         </div>
       </div>
