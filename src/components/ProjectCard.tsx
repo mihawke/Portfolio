@@ -9,9 +9,11 @@ interface ProjectCardProps {
   demo: string;
   github: string;
   technologies: string;
+  status?: 'completed' | 'ongoing'
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, demo, github, technologies }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, demo, github, technologies , status }) => {
+  const statusClassname = `${ status === 'completed' ? 'bg-[#155724]' : 'bg-[#b22200]'} text-white px-4 w-fit  rounded-md text-xs lg:text-sm mt-2 opacity-70`
   return (
     <motion.div
       whileHover={{ scale: 1.05, transition: { duration: 0.2 } }} // Adjust the duration for hover
@@ -23,6 +25,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, demo, git
         <h3 className='text-base lg:text-xl font-semibold text-white'>
           {title}
         </h3>
+        <p className={statusClassname}>
+          {status}
+        </p>
         <p className='text-gray-400 text-xs lg:text-sm mt-2'>
           {description}
         </p>

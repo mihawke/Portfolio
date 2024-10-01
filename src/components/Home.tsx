@@ -155,7 +155,7 @@ const Home = () => {
   }, [currentSection]);
 
   return (
-    <main className="bg-[#1C1C24] flex flex-col flex-[1_1_90%] items-center p-6 overflow-hidden relative">
+    <main className="bg-[#1C1C24] flex flex-col flex-1 items-center p-6 overflow-hidden relative">
       {currentSection === 0 ?
         <motion.div
           key={currentSection}

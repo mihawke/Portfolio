@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section >
+    <section className="flex flex-[1_1_90%]">
     </section>
   )
 }
