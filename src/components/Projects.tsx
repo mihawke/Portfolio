@@ -2,23 +2,101 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   return (
-    <div className='bg-[#1C1C24] flex flex-wrap flex-1 overflow-auto items-start justify-center gap-4 p-4 md:gap-6 md:p-6'>
+    <div className='bg-[#1C1C24] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10'>
+      <ProjectCard
+        title='Rock Paper Scissors'
+        description='An interactive Rock Paper Scissors game built with JavaScript, HTML, and CSS. Players can choose between rock, paper, or scissors, and the game displays results for each round, including player and computer choices, scores, and the total rounds played. The game features a restart button to reset scores and rounds, providing a seamless user experience.'
+        demo='https://mihawke.github.io/rock_paper_scissors/'
+        status='completed'
+        github='https://github.com/mihawke/rock_paper_scissors'
+        technologies='JavaScript | HTML | CSS'
+      />
       <ProjectCard
         title='Tic Tac Toe Game'
         description='This project is a simple browser-based implementation of the classic Tic Tac Toe game. The project showcases fundamental concepts in web development, including event handling, DOM manipulation, and responsive design.'
-        demo=''
+        demo='https://mihawke.github.io/tic_tac_toe/'
         status='completed'
         github='https://github.com/mihawke/tic_tac_toe'
         technologies='JavaScript | HTML | CSS'
       />
       <ProjectCard
+        title='Sketchpad'
+        description='A creative sketchpad application allowing users to draw by hovering over a grid of squares. Users can customize their drawing experience by toggling between random colors and black for a unique artistic effect.'
+        demo='https://mihawke.github.io/sketchpad/'
+        status='completed'
+        github='https://github.com/mihawke/sketchpad'
+        technologies='JavaScript | HTML | CSS'
+      />
+      <ProjectCard
+        title='Calculator'
+        description='This project is a functional calculator built with JavaScript, HTML, and CSS. This project showcases essential programming concepts including event handling, operator management, and mathematical functions, making it a great tool for practicing JavaScript fundamentals.'
+        demo='https://mihawke.github.io/calculator/'
+        status='completed'
+        github='https://github.com/mihawke/calculator'
+        technologies='JavaScript | HTML | CSS'
+      />
+      <ProjectCard
         title='Admin Dashboard'
         description='This project showcases a simple yet functional admin dashboard layout designe. It features a clean and modern interface with organized sections for navigation, anouncements, and projects. This project highlights fundamental web design principles and serves as a template for future development.'
-        demo=''
+        demo='https://mihawke.github.io/admin_dashboard/'
         status='ongoing'
         github='https://github.com/mihawke/admin_dashboard'
         technologies='HTML | CSS'
       />
+      <ProjectCard
+        title='Library'
+        description='The Library application, built with JavaScript, HTML, and CSS, allows users to manage and display their personal book collection. It features a dynamic user interface where users can add books with details like cover image, title, author, pages, and reading status. The app utilizes an object constructor for book creation and dynamically updates the book list in the DOM, showcasing fundamental JavaScript concepts.'
+        demo='https://mihawke.github.io/library/'
+        status='completed'
+        github='https://github.com/mihawke/library'
+        technologies='JavaScript | HTML | CSS'
+      />
+      <ProjectCard
+        title='Sign Up Form'
+        description='A user-friendly sign-up form that features real-time validation for password confirmation. When a user enters their password, they can verify that it matches the confirmation field. The form is built using JavaScript for interactive elements, along with HTML and CSS for structure and styling.'
+        demo='https://mihawke.github.io/sign_up_form/'
+        status='completed'
+        github='https://github.com/mihawke/sign_up_form'
+        technologies='JavaScript | HTML | CSS'
+      />
+
+      <ProjectCard
+        title='Homepage'
+        description='This project is a simple and clean homepage built using HTML and CSS. The homepage includes sections such as a header, main content area, and footer, providing a structured foundation for further development.'
+        demo='https://mihawke.github.io/homepage/'
+        status='completed'
+        github='https://github.com/mihawke/homepage'
+        technologies='HTML | CSS'
+      />
+      
+      <ProjectCard
+        title='Movie Tracker'
+        description='Developed a movie search application using React, fetching data from the OMDB API. The application allows users to search for movies by title and displays the results dynamically. '
+        demo='https://movie-tracker-tau.vercel.app/'
+        status='completed'
+        github='https://github.com/mihawke/MovieTracker'
+        technologies='React | OMDB API'
+      />
+      <ProjectCard
+        title='Memory Card Game'
+        description='The Memory Card Game is a fun and interactive React application that challenges players to match car images. The game features a scoring system where players earn points for each successful match while trying to avoid selecting the same card twice. With a clean and responsive design, this project showcases key React concepts, including state management and component rendering.'
+        demo='https://memory-card-navy-pi.vercel.app/'
+        status='completed'
+        github='https://github.com/mihawke/memory_card'
+        technologies='React | CSS'
+      />
+      <ProjectCard
+        title='React Recorder'
+        description='This project is an Audio Recorder with Speech Recognition built in React, allowing users to record audio while transcribing speech into text in real-time using the Web Speech API. It enables playback of recorded audio and displays transcribed text as the user speaks.'
+        demo='https://react-recorder-gules.vercel.app/'
+        status='completed'
+        github='https://github.com/mihawke/ReactRecorder'
+        technologies='Node.js | HTML | CSS'
+      />
+
+{/* /////////////////////////////////// */}
+
+
       <ProjectCard
         title='Basic Node Website'
         description='This project is a simple web server built using Node.js, demonstrating fundamental concepts of server-side programming. The server serves static HTML pages, including an index page, an about page, and a contact page, utilizing the built-in HTTP module. It handles different content types based on the requested file extensions and serves a custom 404 page for not found errors.'
@@ -29,18 +107,10 @@ const Projects = () => {
       />
 
       <ProjectCard
-        title='Calculator'
-        description='This project is a functional calculator built with JavaScript, HTML, and CSS. This project showcases essential programming concepts including event handling, operator management, and mathematical functions, making it a great tool for practicing JavaScript fundamentals.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/calculator'
-        technologies='JavaScript | HTML | CSS'
-      />
-      <ProjectCard
         title='Carousel'
         description='This project showcases an image carousel implemented using JavaScript, HTML, and CSS. The carousel allows users to navigate through a series of images smoothly, utilizing next and previous buttons for intuitive controls. Ideal for showcasing images, products, or any content that benefits from a visual slideshow format.'
         demo=''
-        status='completed'
+        status='ongoing'
         github='https://github.com/mihawke/carousel'
         technologies='JavaScript | HTML | CSS'
       />
@@ -53,14 +123,6 @@ const Projects = () => {
         technologies='React | CSS'
       />
       <ProjectCard
-        title='Homepage'
-        description='This project is a simple and clean homepage built using HTML and CSS. The homepage includes sections such as a header, main content area, and footer, providing a structured foundation for further development.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/homepage'
-        technologies='HTML | CSS'
-      />
-      <ProjectCard
         title='Inventory Application'
         description='This Inventory Application, built with JavaScript, EJS, and CSS, allows users to manage products through a robust Express.js backend. It supports CRUD operations and filtering by category, all while interfacing with a PostgreSQL database. The application employs parameterized queries for secure data handling and uses EJS for dynamic front-end rendering, demonstrating full-stack development concepts.'
         demo=''
@@ -69,28 +131,12 @@ const Projects = () => {
         technologies='JavaScript | EJS | CSS | PostgreSQL'
       />
       <ProjectCard
-        title='Library'
-        description='The Library application, built with JavaScript, HTML, and CSS, allows users to manage and display their personal book collection. It features a dynamic user interface where users can add books with details like cover image, title, author, pages, and reading status. The app utilizes an object constructor for book creation and dynamically updates the book list in the DOM, showcasing fundamental JavaScript concepts.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/library'
-        technologies='JavaScript | HTML | CSS'
-      />
-      <ProjectCard
         title='Members Only'
         description='The Members Only application is a Node.js-based web platform that utilizes Express and EJS for rendering dynamic content. It features user authentication with Passport.js, allowing members to securely log in and access exclusive content. The app is connected to a PostgreSQL database for data storage, managing user information and session data effectively.'
         demo=''
         status='ongoing'
         github='https://github.com/mihawke/members_only'
         technologies='Node.js | EJS | CSS | MongoDB'
-      />
-      <ProjectCard
-        title='Memory Card Game'
-        description='The Memory Card Game is a fun and interactive React application that challenges players to match car images. The game features a scoring system where players earn points for each successful match while trying to avoid selecting the same card twice. With a clean and responsive design, this project showcases key React concepts, including state management and component rendering.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/memory_card'
-        technologies='React | CSS'
       />
       <ProjectCard
         title='Mini Message Board'
@@ -108,14 +154,7 @@ const Projects = () => {
         github='https://github.com/mihawke/restaurant_page'
         technologies='JavaScript | HTML | CSS | Webpack'
       />
-      <ProjectCard
-        title='Rock Paper Scissors'
-        description='An interactive Rock Paper Scissors game built with JavaScript, HTML, and CSS. Players can choose between rock, paper, or scissors, and the game displays results for each round, including player and computer choices, scores, and the total rounds played. The game features a restart button to reset scores and rounds, providing a seamless user experience.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/rock_paper_scissors'
-        technologies='JavaScript | HTML | CSS'
-      />
+
       <ProjectCard
         title='Shopping Cart'
         description='A React-based shopping cart application that allows users to browse products from a fake store API. Users can view product details, add items to their cart, and maintain a shared cart state. The application features a clean and responsive design using CSS, making it easy to navigate and interact with products.'
@@ -124,22 +163,7 @@ const Projects = () => {
         github='https://github.com/mihawke/shopping_cart'
         technologies='React | CSS | API'
       />
-      <ProjectCard
-        title='Sign Up Form'
-        description='A user-friendly sign-up form that features real-time validation for password confirmation. When a user enters their password, they can verify that it matches the confirmation field. The form is built using JavaScript for interactive elements, along with HTML and CSS for structure and styling.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/sign_up_form'
-        technologies='JavaScript | HTML | CSS'
-      />
-      <ProjectCard
-        title='Sketchpad'
-        description='A creative sketchpad application allowing users to draw by hovering over a grid of squares. Users can customize their drawing experience by toggling between random colors and black for a unique artistic effect.'
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/sketchpad'
-        technologies='JavaScript | HTML | CSS'
-      />
+
       <ProjectCard
         title='Theme Park'
         description='Theme Park is a React-based project designed for testing various themes and switching between them seamlessly. It allows users to experience different visual styles and layouts, making it ideal for developers and designers looking to explore design options. The project utilizes Tailwind CSS for styling, ensuring a modern and responsive design approach.'
@@ -193,14 +217,6 @@ Developed server-side logic using Node.js and Express.js to handle API requests 
         status='completed'
         github='https://github.com/mihawke/MERN-Todos'
         technologies='React | MongoDB | Express.js | Node.js'
-      />
-      <ProjectCard
-        title='Movie Tracker'
-        description='Developed a movie search application using React, fetching data from the OMDB API. The application allows users to search for movies by title and displays the results dynamically. '
-        demo=''
-        status='completed'
-        github='https://github.com/mihawke/MovieTracker'
-        technologies='React | OMDB API'
       />
       <ProjectCard
         title='Form Builder'
