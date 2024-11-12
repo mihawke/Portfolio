@@ -4,6 +4,14 @@ const Projects = () => {
   return (
     <div className='bg-[#1C1C24] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10'>
       <ProjectCard
+        title='Component Library'
+        description='This is a personal React component library built with Tailwind CSS. It offers a collection of reusable, customizable, and accessible UI components for rapid development. Perfect for developers who want to build beautiful, responsive interfaces with minimal setup.'
+        demo='https://component-library-drab.vercel.app/'
+        status='completed'
+        github='https://github.com/mihawke/ComponentLibrary'
+        technologies='React | Typescript | Tailwind CSS'
+      />
+      <ProjectCard
         title='Rock Paper Scissors'
         description='An interactive Rock Paper Scissors game built with JavaScript, HTML, and CSS. Players can choose between rock, paper, or scissors, and the game displays results for each round, including player and computer choices, scores, and the total rounds played. The game features a restart button to reset scores and rounds, providing a seamless user experience.'
         demo='https://mihawke.github.io/rock_paper_scissors/'
@@ -68,7 +76,7 @@ const Projects = () => {
         github='https://github.com/mihawke/homepage'
         technologies='HTML | CSS'
       />
-      
+
       <ProjectCard
         title='Movie Tracker'
         description='Developed a movie search application using React, fetching data from the OMDB API. The application allows users to search for movies by title and displays the results dynamically. '
@@ -94,7 +102,7 @@ const Projects = () => {
         technologies='Node.js | HTML | CSS'
       />
 
-{/* /////////////////////////////////// */}
+      {/* /////////////////////////////////// */}
 
 
       <ProjectCard
@@ -186,15 +194,6 @@ const Projects = () => {
         demo=''
         status='ongoing'
         github='https://github.com/mihawke/ChatApplication'
-        technologies='React | Tailwind CSS'
-      />
-      <ProjectCard
-        title='React Designs'
-        description='Continuously developing an ongoing project featuring a collection of landing page templates and designs built using React and Tailwind CSS, ensuring responsiveness across various devices.
-Crafting visually appealing and user-friendly interfaces that showcase the versatility of Tailwind CSS for rapid prototyping and styling.'
-        demo=''
-        status='ongoing'
-        github='https://github.com/mihawke/ReactDesign'
         technologies='React | Tailwind CSS'
       />
       <ProjectCard
