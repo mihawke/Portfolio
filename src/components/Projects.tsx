@@ -11,6 +11,14 @@ const Projects = () => {
         github='https://github.com/mihawke/ComponentLibrary'
         technologies='React | Typescript | Tailwind CSS'
       />
+       <ProjectCard
+        title='TodosApp'
+        description='This Todo application uses Redux for state management, handling both individual todo items and meta information such as the author. It allows users to add, remove, and toggle the completion of todos, as well as filter them by status (all, active, completed). The app also enables setting an author for the todo list and displays loading or error states when interacting with the data.'
+        demo='https://todos-app-taupe-nine.vercel.app/'
+        status='completed'
+        github='https://github.com/mihawke/TodosApp'
+        technologies='React | Redux | Tailwind CSS'
+      />
       <ProjectCard
         title='Rock Paper Scissors'
         description='An interactive Rock Paper Scissors game built with JavaScript, HTML, and CSS. Players can choose between rock, paper, or scissors, and the game displays results for each round, including player and computer choices, scores, and the total rounds played. The game features a restart button to reset scores and rounds, providing a seamless user experience.'
