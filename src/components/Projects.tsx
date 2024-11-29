@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
   return (
     <div className='bg-[#1C1C24] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10'>
+      
       <ProjectCard
         title='Component Library'
         description='This is a personal React component library built with Tailwind CSS. It offers a collection of reusable, customizable, and accessible UI components for rapid development. Perfect for developers who want to build beautiful, responsive interfaces with minimal setup.'
@@ -10,6 +11,14 @@ const Projects = () => {
         status='completed'
         github='https://github.com/mihawke/ComponentLibrary'
         technologies='React | Typescript | Tailwind CSS'
+      />
+       <ProjectCard
+        title='FormGenerator'
+        description='FormGenerator is a React app built with Vite and Tailwind that dynamically generates forms based on real-time JSON input. Users can edit the JSON to instantly update the form, while receiving real-time validation feedback for errors. Its intuitive interface makes it perfect for quickly prototyping or customizing forms.'
+        demo='https://form-generator-eta.vercel.app/'
+        status='completed'
+        github='https://github.com/mihawke/FormGenerator'
+        technologies='React | Tailwind CSS'
       />
        <ProjectCard
         title='TodosApp'
